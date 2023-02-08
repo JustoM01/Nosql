@@ -23,9 +23,9 @@ module.exports = {
 
       getOneThought(req, res) {
         Thought.findOne({
-            where:{
+            
                 _id:req.params.userId
-            }
+           
         })
         .then((thoughtdata) => res.json(thoughtdata))
           .catch((err) => res.status(500).json(err));

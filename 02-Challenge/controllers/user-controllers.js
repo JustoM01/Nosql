@@ -15,12 +15,13 @@ module.exports = {
 
       getOneUser(req, res) {
         User.findOne({
-            where:{
+            
                 _id:req.params.userId
-            }
+            
         })
           .then((user) => res.json(user))
           .catch((err) => res.status(500).json(err));
       },
+
 
 }
